@@ -10,7 +10,7 @@ db = SQLAlchemy()
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = os.getenv("SECRET_KEY")
-    app.config['SQLALCHEMY_DATABASE_URI'] = "postgresql://os.getenv("DB_USER"):os.getenv("DB_PASSWORD")@localhost:5432/rbac_blog"
+    app.config['SQLALCHEMY_DATABASE_URI'] = os.getenv("DB_PATH")
     db.init_app(app)
     
     create_database(app)
